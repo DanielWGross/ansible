@@ -1,0 +1,7 @@
+- hosts: localhost
+  vars:
+    personal: "{{ lookup('env', 'HOME') }}/dev"
+    bootcamp: "{{ lookup('env', 'HOME') }}/{{ personal }}/bootcamp"
+  tasks:
+    - include: tasks/personal-projects.yml
+    # - include: tasks/homebrew.yml

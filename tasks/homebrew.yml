@@ -1,0 +1,4 @@
+- name: Install some homebrew stuff
+      community.general.homebrew:
+        name: youtube-dl
+        state: present
