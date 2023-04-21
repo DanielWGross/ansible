@@ -1,0 +1,28 @@
+- name: Bootcamp - Student repo
+  ansible.builtin.git:
+    repo: git@upenn.bootcampcontent.com:upenn-bootcamp/UPENN-VIRT-FSF-PT-11-2022-U-LOLC.git
+    dest: "{{ personal }}/bootcamp/student"
+  tags:
+    - bootcamp-project
+
+- name: Bootcamp - Instructor repo
+  ansible.builtin.git:
+    repo: git@github.com:coding-boot-camp/fullstack-live.git
+    dest: "{{ personal }}/bootcamp/instructor"
+  tags:
+    - bootcamp-project
+
+- name: Guru - Guru UI
+  ansible.builtin.git:
+    repo: git@github.com:guruhq/guru-ui.git
+    dest: "{{ personal }}/guru/guru-ui"
+  tags:
+    - guru-project
+
+- name: Personal - Tech Matchup
+  ansible.builtin.git:
+    repo: git@github.com:dgross-bootcamp/tech-matchup.git
+    dest: "{{ personal }}/tech-matchup"
+  tags:
+    - personal-project
+

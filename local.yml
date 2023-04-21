@@ -2,7 +2,6 @@
   connection: local
   vars:
     personal: "{{ lookup('env', 'HOME') }}/dev"
-    bootcamp: "{{ lookup('env', 'HOME') }}/{{ personal }}/bootcamp"
   tasks:
-  - import_tasks: tasks/personal-projects.yml
+  - import_tasks: tasks/projects.yml
     # - include: tasks/homebrew.yml

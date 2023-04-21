@@ -1,7 +1,0 @@
-- name: Bootcamp Project GitLab
-  ansible.builtin.git:
-    repo: git@upenn.bootcampcontent.com:upenn-bootcamp/UPENN-VIRT-FSF-PT-11-2022-U-LOLC.git
-    dest: "{{ personal }}/bootcamp/gitlab"
-  tags:
-    - personal-project
-    - bootcamp-project
