@@ -7,14 +7,3 @@
   ansible.builtin.git:
     repo: git@github.com:coding-boot-camp/fullstack-live.git
     dest: "{{ personal }}/bootcamp/instructor"
-
-- name: Guru - Guru UI
-  ansible.builtin.git:
-    repo: git@github.com:guruhq/guru-ui.git
-    dest: "{{ personal }}/guru/guru-ui"
-
-- name: Personal - Tech Matchup
-  ansible.builtin.git:
-    repo: git@github.com:dgross-bootcamp/tech-matchup.git
-    dest: "{{ personal }}/tech-matchup"
-

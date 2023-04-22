@@ -18,9 +18,17 @@
       when: not homebrew_check.stat.exists
 
   tasks:
-  - import_tasks: tasks/projects.yml
+  - import_tasks: tasks/xcode.yml
+    tags: xcode
+  - import_tasks: tasks/projects/bootcamp-projects.yml
+    tags: projects
+  - import_tasks: tasks/projects/personal-projects.yml
+    tags: projects
+  - import_tasks: tasks/projects/work-projects.yml
     tags: projects
   - import_tasks: tasks/homebrew.yml
     vars:
       homebrew_task: "{{ homebrew_check }}"
     tags: homebrew
+      
+

@@ -1,0 +1,5 @@
+- name: Personal - Tech Matchup
+  ansible.builtin.git:
+    repo: git@github.com:dgross-bootcamp/tech-matchup.git
+    dest: "{{ personal }}/tech-matchup"
+
