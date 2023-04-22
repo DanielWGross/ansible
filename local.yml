@@ -2,6 +2,25 @@
   connection: local
   vars:
     personal: "{{ lookup('env', 'HOME') }}/dev"
+
+  pre_tasks:
+    - name: Ensuring Homebrew Is Installed
+      stat:
+        path: /opt/homebrew/bin/brew
+      register: homebrew_check
+    - name: Print Homebrew Exists
+      debug: 
+        msg: "Homebrew Path Exists!"
+      when: homebrew_check.stat.exists
+    - name: Print Homebrew Doesn't Exist
+      debug: 
+        msg: "Homebrew Is Not Installed!"
+      when: not homebrew_check.stat.exists
+
   tasks:
   - import_tasks: tasks/projects.yml
-    # - include: tasks/homebrew.yml
+    tags: projects
+  - import_tasks: tasks/homebrew.yml
+    vars:
+      homebrew_task: "{{ homebrew_check }}"
+    tags: homebrew

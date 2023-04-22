@@ -1,4 +1,4 @@
-- name: Install some homebrew stuff
-      community.general.homebrew:
-        name: youtube-dl
-        state: present
+- name: Updating Homebrew
+  community.general.homebrew:
+    update_homebrew: true
+
