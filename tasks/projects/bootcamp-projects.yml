@@ -1,9 +1,9 @@
 - name: Bootcamp - Student repo
   ansible.builtin.git:
     repo: git@upenn.bootcampcontent.com:upenn-bootcamp/UPENN-VIRT-FSF-PT-11-2022-U-LOLC.git
-    dest: "{{ personal }}/bootcamp/student"
+    dest: "{{ dev }}/bootcamp/student"
 
 - name: Bootcamp - Instructor repo
   ansible.builtin.git:
     repo: git@github.com:coding-boot-camp/fullstack-live.git
-    dest: "{{ personal }}/bootcamp/instructor"
+    dest: "{{ dev }}/bootcamp/instructor"

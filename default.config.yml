@@ -1,4 +1,4 @@
-personal: "{{ lookup('env', 'HOME') }}/dev"
+dev: "{{ lookup('env', 'HOME') }}/dev"
 homebrew_tap_apps:
   - homebrew/cask-fonts
   - heroku/brew 

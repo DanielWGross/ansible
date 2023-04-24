@@ -1,5 +1,5 @@
 - name: Guru - Guru UI
   ansible.builtin.git:
     repo: git@github.com:guruhq/guru-ui.git
-    dest: "{{ personal }}/guru/guru-ui"
+    dest: "{{ dev }}/guru/guru-ui"
 

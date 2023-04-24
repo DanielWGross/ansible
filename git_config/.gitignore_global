@@ -1,0 +1,14 @@
+# Mac files
+.DS_Store
+
+# Vim temp files
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# VS Code files
+.vscode
+
