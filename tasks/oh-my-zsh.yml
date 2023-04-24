@@ -1,0 +1,6 @@
+- name: Install Oh My Zsh
+  # https://github.com/ohmyzsh/ohmyzsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  # Don't try to install if .oh-my.zsh exists at Users/<user>/
+  args:
+    creates: "/Users/{{ lookup('env', 'USER') }}/.oh-my-zsh"

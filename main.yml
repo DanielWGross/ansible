@@ -30,5 +30,7 @@
     vars:
       homebrew_task: "{{ homebrew_check }}"
     tags: homebrew
+  - import_tasks: tasks/oh-my-zsh.yml
+    tags: oh-my-zsh
       
 

@@ -9,4 +9,6 @@
 4. Install Ansible
     ```
     pip3 install ansible
-    ```
+```
+
+NOTE: Can use `ansible-vault encrypt_string '<string_to_encrypt' --name '<string_name_of_variable>'`
