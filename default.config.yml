@@ -1,0 +1,20 @@
+personal: "{{ lookup('env', 'HOME') }}/dev"
+homebrew_cask_apps:
+  - 1password
+  - alfred
+  - arc
+  - discord
+  - elgato-camera-hub
+  - elgato-control-center
+  - elgato-stream-deck
+  - elgato-wave-link
+  - font-fira-code
+  - font-jetbrains-mono
+  - font-montserrat
+  - hey
+  - insomnia
+  - iterm2
+  - karabiner-elements
+  - rectangle-pro
+  - switchresx
+  - visual-studio-code
