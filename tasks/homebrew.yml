@@ -2,10 +2,25 @@
   community.general.homebrew:
     update_homebrew: true
 
+- name: Install Homebrew Tap Applications
+  community.general.homebrew_tap:
+    name: "{{ item.name | default(item) }}"
+    url: '{{ item.url | default(omit) }}'
+    state: "{{ item.state | default('present') }}"
+  loop: "{{ homebrew_tap_apps }}"
+
 - name: Install Homebrew Cask Applications
   community.general.homebrew_cask:
     name: "{{ item.name | default(item) }}"
-    state: present
+    state: "{{ item.state | default('present') }}"
     sudo_password: "{{ ansible_become_password | default(omit) }}"
+  ignore_errors: yes
   loop: "{{ homebrew_cask_apps }}"
+
+- name: Install Homebrew Formulae Applications
+  community.general.homebrew:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('present') }}"
+    sudo_password: "{{ ansible_become_password | default(omit) }}"
+  loop: "{{ homebrew_formulae_apps }}"  
 

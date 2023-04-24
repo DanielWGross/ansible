@@ -1,4 +1,7 @@
 personal: "{{ lookup('env', 'HOME') }}/dev"
+homebrew_tap_apps:
+  - homebrew/cask-fonts
+  - heroku/brew 
 homebrew_cask_apps:
   - 1password
   - alfred
@@ -18,3 +21,11 @@ homebrew_cask_apps:
   - rectangle-pro
   - switchresx
   - visual-studio-code
+homebrew_formulae_apps:
+  - heroku
+  - neovim
+  - nvm
+  - ripgrep
+  - tmux
+  - watchman
+  - yarn
