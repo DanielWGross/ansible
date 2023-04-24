@@ -2,3 +2,10 @@
   community.general.homebrew:
     update_homebrew: true
 
+- name: Install Homebrew Cask Applications
+  community.general.homebrew_cask:
+    name: "{{ item.name | default(item) }}"
+    state: present
+    sudo_password: "{{ ansible_become_password | default(omit) }}"
+  loop: "{{ homebrew_cask_apps }}"
+
