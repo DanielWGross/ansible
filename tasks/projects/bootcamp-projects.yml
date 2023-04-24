@@ -1,9 +1,25 @@
-- name: Bootcamp - Student repo
+- name: Bootcamp - Student Repo - Exists
+  stat:
+    path: "{{ dev }}/bootcamp/student"
+  register: student_repo
+
+- name: Bootcamp - Student Repo
   ansible.builtin.git:
     repo: git@upenn.bootcampcontent.com:upenn-bootcamp/UPENN-VIRT-FSF-PT-11-2022-U-LOLC.git
     dest: "{{ dev }}/bootcamp/student"
+  when: student_repo.stat.exists == False
 
-- name: Bootcamp - Instructor repo
+# ------------------------------------------------------------------------------------------
+
+- name: Bootcamp - Instructor Repo - Exists
+  stat:
+    path: "{{ dev }}/bootcamp/instructor"
+  register: instructor_repo
+
+- name: Bootcamp - Instructor Repo
   ansible.builtin.git:
     repo: git@github.com:coding-boot-camp/fullstack-live.git
     dest: "{{ dev }}/bootcamp/instructor"
+  when: instructor_repo.stat.exists == False
+
+# ------------------------------------------------------------------------------------------

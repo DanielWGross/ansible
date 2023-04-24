@@ -1,5 +1,13 @@
+- name: Guru - Guru UI - Exists
+  stat:
+    path: "{{ dev }}/guru/guru-ui"
+  register: guru_ui
+
 - name: Guru - Guru UI
   ansible.builtin.git:
     repo: git@github.com:guruhq/guru-ui.git
     dest: "{{ dev }}/guru/guru-ui"
+  when: guru_ui.stat.exists == False
+
+# ------------------------------------------------------------------------------------------
 

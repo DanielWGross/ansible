@@ -1,5 +1,13 @@
+- name: Personal - Tech Matchup - Exists
+  stat:
+    path: "{{ dev }}/personal/tech-matchup"
+  register: tech_matchup
+
 - name: Personal - Tech Matchup
   ansible.builtin.git:
     repo: git@github.com:dgross-bootcamp/tech-matchup.git
     dest: "{{ dev }}/personal/tech-matchup"
+  when: tech_matchup.stat.exists == False
+
+# ------------------------------------------------------------------------------------------
 
