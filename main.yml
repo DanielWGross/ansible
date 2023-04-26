@@ -32,5 +32,7 @@
     tags: homebrew
   - import_tasks: tasks/oh-my-zsh.yml
     tags: oh-my-zsh
+  - import_tasks: tasks/git-config.yml
+    tags: git-config
       
 

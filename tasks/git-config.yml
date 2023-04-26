@@ -1,0 +1,7 @@
+- name: Copy Git Config Files
+  copy:
+    src: "{{ item }}"
+    dest: "~/dev/ansible/tasks/"
+    mode: 0700
+  with_fileglob:
+    - "~/dev/ansible/git_config/.*"
