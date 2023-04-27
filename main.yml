@@ -34,5 +34,7 @@
     tags: oh-my-zsh
   - import_tasks: tasks/git-config.yml
     tags: git-config
+  - import_tasks: tasks/nvm.yml
+    tags: nvm
       
 

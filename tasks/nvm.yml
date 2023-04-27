@@ -1,0 +1,4 @@
+- name: Install Node @ LTS
+  shell: source $HOME/.nvm/nvm.sh && nvm install --lts
+  args:
+    executable: /bin/zsh
