@@ -20,7 +20,7 @@ This playbook is heavily inspired by others out there to create something that m
 4. Ensure `pip` is available by running `python3 -m pip -V`.
 5. Install Ansible by running `python3 -m pip install ansible`
 6. Confirm Ansible installation by running `ansible --version`
-
+7. Clone this repo
 
 
 
