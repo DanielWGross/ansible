@@ -24,11 +24,14 @@
   register: homebrew_check
 #
 - name: Install Homebrew
-  ansible.builtin.shell: "{{ playbook_dir }}/tasks/scripts/install-homebrew.sh"
-  register: homebrew_install_output
+  shell: "/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-- name: Debug Homebrew Install
-  debug: var=homebrew_install_output.stdout_lines
+# - name: Install Homebrew
+#   ansible.builtin.shell: "{{ playbook_dir }}/tasks/scripts/install-homebrew.sh"
+#   register: homebrew_install_output
+#
+# - name: Debug Homebrew Install
+#   debug: var=homebrew_install_output.stdout_lines
 #
 # - name: Updating Homebrew
 #   community.general.homebrew:
