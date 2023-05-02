@@ -4,6 +4,8 @@
     - default.config.yml
 
   tasks:
+  - import_tasks: tasks/ssh.yml
+    tags: ssh
   - import_tasks: tasks/projects/bootcamp-projects.yml
     tags: projects
   - import_tasks: tasks/projects/personal-projects.yml

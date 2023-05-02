@@ -1,2 +1,1 @@
-localhost
-ansible_become_password=password
+localhost ansible_become_password=password ansible_python_interpreter=/usr/bin/python3

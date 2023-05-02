@@ -24,7 +24,7 @@
   register: homebrew_check
 #
 - name: Install Homebrew
-  shell: "/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  shell: '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 
 # - name: Install Homebrew
 #   ansible.builtin.shell: "{{ playbook_dir }}/tasks/scripts/install-homebrew.sh"

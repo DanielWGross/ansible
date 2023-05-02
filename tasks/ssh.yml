@@ -1,0 +1,25 @@
+- name: Ensure .ssh Directory Exists
+  file:
+    dest: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    mode: 0700
+    state: directory
+
+- name: Install Private SSH Key
+  copy:
+    src: "{{ playbook_dir }}/ssh/id_rsa"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    mode: 0600
+
+- name: Install Public SSH Key
+  copy:
+    src: "{{ playbook_dir }}/ssh/id_rsa.pub"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
+    mode: 0644
+
+- name: Set Authorized SSH Key
+  authorized_key:
+    user: "{{ lookup('env', 'USER') }}"
+    state: present
+    key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
+  with_fileglob:
+  - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"

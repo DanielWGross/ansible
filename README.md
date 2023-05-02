@@ -15,12 +15,16 @@ This playbook is heavily inspired by others out there to create something that m
 2. Ensure Python3 is installed by running `python3 --version`. 
 3. Add Python 3 to your $PATH
   - Create a `.zshrc` in the root directory and add the following line:
-    - `export PAATH=$HOME/Library/Python/3.9/bin:$PATH`
+    - `export PATH=$HOME/Library/Python/3.9/bin:$PATH`
     - NOTE: You may need to confirm the path and version.
-4. Ensure `pip` is available by running `python3 -m pip -V`.
-5. Install Ansible by running `python3 -m pip install ansible`
-6. Confirm Ansible installation by running `ansible --version`
-7. Clone this repo
+4. Ensure the `ansible_python_interpreter` path is correct in the `inventory` file
+5. Ensure `pip` is available by running `python3 -m pip -V`.
+6. Install Ansible by running `python3 -m pip install ansible`
+7. Confirm Ansible installation by running `ansible --version`
+8. Install Homebrew by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+  - NOTE: Double check the command by visiting `https://brew.sh/` 
+9. Take a look at the output in the terminal as there will be some steps listed under "Nest steps"
+10. Clone this repo
 
 
 
