@@ -1,6 +1,6 @@
 - name: Ensure .ssh Directory Exists
   file:
-    dest: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh"
     mode: 0700
     state: directory
 
@@ -16,10 +16,16 @@
     dest: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
     mode: 0644
 
-- name: Set Authorized SSH Key
-  authorized_key:
-    user: "{{ lookup('env', 'USER') }}"
-    state: present
-    key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
-  with_fileglob:
-  - "{{ lookup('env', 'HOME') }}/.ssh/*.pub"
+- name: Scan for SSH host keys.
+  local_action:
+    module: shell
+    cmd: ssh-keyscan upenn.bootcampcontent.com 2>/dev/null
+  changed_when: False
+  register: ssh_scan
+
+- name: Update known_hosts.
+  local_action:
+    module: known_hosts
+    key: "{{ item }}"
+    name: "upenn.bootcampcontent.com"
+  with_items: "{{ ssh_scan.stdout_lines }}"
