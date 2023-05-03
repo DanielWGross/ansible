@@ -4,4 +4,4 @@
     dest: "~/"
     mode: 0700
   with_fileglob:
-    - "~/dev/ansible/git_config/.*"
+    - "{{ playbook_dir }}/git_config/.*"
