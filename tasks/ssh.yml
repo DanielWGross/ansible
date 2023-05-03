@@ -21,25 +21,25 @@
     module: shell
     cmd: ssh-keyscan upenn.bootcampcontent.com 2>/dev/null
   changed_when: False
-  register: ssh_scan
+  register: ssh_scan_upenn_gitlab
 
 - name: Update known_hosts.
   local_action:
     module: known_hosts
     key: "{{ item }}"
     name: "upenn.bootcampcontent.com"
-  with_items: "{{ ssh_scan.stdout_lines }}"
+  with_items: "{{ ssh_scan_upenn_gitlab.stdout_lines }}"
 
 - name: Scan for SSH host keys for Github
   local_action:
     module: shell
     cmd: ssh-keyscan github.com 2>/dev/null
   changed_when: False
-  register: ssh_scan
+  register: ssh_scan_github
 
 - name: Update known_hosts.
   local_action:
     module: known_hosts
     key: "{{ item }}"
     name: "github.com"
-  with_items: "{{ ssh_scan.stdout_lines }}"
+  with_items: "{{ ssh_scan_github.stdout_lines }}"
