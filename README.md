@@ -33,6 +33,7 @@ This playbook is heavily inspired by others out there to create something that m
 - When running the playbook there are a couple flags you may need...
   - `--ask-vault-pass` to provide your ansible vault password
   - `--ask-become-pass` to provide your system password (for sudo)
+  - These could *probably* just be vaulted, right?
 - The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
 
 
