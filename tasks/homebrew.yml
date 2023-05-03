@@ -36,7 +36,6 @@
 - name: Updating Homebrew
   community.general.homebrew:
     update_homebrew: true
-  when: homebrew_check.stat.exists
 
 - name: Install Homebrew Tap Applications
   community.general.homebrew_tap:
