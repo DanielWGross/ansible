@@ -30,6 +30,9 @@ This playbook is heavily inspired by others out there to create something that m
 
 ## Notes & TODOS
 - Consider setting the default git config pull strategy to rebase
+- When running the playbook there are a couple flags you may need...
+  - `--ask-vault-pass` to provide your ansible vault password
+  - `--ask-become-pass` to provide your system password (for sudo)
 
 
 
