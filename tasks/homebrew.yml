@@ -18,13 +18,13 @@
   #       msg: "Homebrew Is Not Installed!"
   #     when: not homebrew_check.stat.exists
 
-- name: Check if Homebrew Is Installed
-  stat:
-    path: /opt/homebrew/bin/brew
-  register: homebrew_check
-#
-- name: Install Homebrew
-  shell: '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+# - name: Check if Homebrew Is Installed
+#   stat:
+#     path: /opt/homebrew/bin/brew
+#   register: homebrew_check
+# #
+# - name: Install Homebrew
+#   shell: '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 
 # - name: Install Homebrew
 #   ansible.builtin.shell: "{{ playbook_dir }}/tasks/scripts/install-homebrew.sh"
@@ -33,30 +33,30 @@
 # - name: Debug Homebrew Install
 #   debug: var=homebrew_install_output.stdout_lines
 #
-# - name: Updating Homebrew
-#   community.general.homebrew:
-#     update_homebrew: true
-#   when: homebrew_check.stat.exists
-#
-# - name: Install Homebrew Tap Applications
-#   community.general.homebrew_tap:
-#     name: "{{ item.name | default(item) }}"
-#     url: '{{ item.url | default(omit) }}'
-#     state: "{{ item.state | default('present') }}"
-#   loop: "{{ homebrew_tap_apps }}"
-#
-# - name: Install Homebrew Cask Applications
-#   community.general.homebrew_cask:
-#     name: "{{ item.name | default(item) }}"
-#     state: "{{ item.state | default('present') }}"
-#     sudo_password: "{{ ansible_become_password | default(omit) }}"
-#   ignore_errors: yes
-#   loop: "{{ homebrew_cask_apps }}"
-#
-# - name: Install Homebrew Formulae Applications
-#   community.general.homebrew:
-#     name: "{{ item.name | default(item) }}"
-#     state: "{{ item.state | default('present') }}"
-#     sudo_password: "{{ ansible_become_password | default(omit) }}"
-#   loop: "{{ homebrew_formulae_apps }}"  
-#
+- name: Updating Homebrew
+  community.general.homebrew:
+    update_homebrew: true
+  when: homebrew_check.stat.exists
+
+- name: Install Homebrew Tap Applications
+  community.general.homebrew_tap:
+    name: "{{ item.name | default(item) }}"
+    url: '{{ item.url | default(omit) }}'
+    state: "{{ item.state | default('present') }}"
+  loop: "{{ homebrew_tap_apps }}"
+
+- name: Install Homebrew Cask Applications
+  community.general.homebrew_cask:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('present') }}"
+    sudo_password: "{{ ansible_become_password | default(omit) }}"
+  ignore_errors: yes
+  loop: "{{ homebrew_cask_apps }}"
+
+- name: Install Homebrew Formulae Applications
+  community.general.homebrew:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('present') }}"
+    sudo_password: "{{ ansible_become_password | default(omit) }}"
+  loop: "{{ homebrew_formulae_apps }}"  
+
