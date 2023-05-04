@@ -35,6 +35,7 @@ This playbook is heavily inspired by others out there to create something that m
   - `--ask-become-pass` to provide your system password (for sudo)
   - These could *probably* just be vaulted, right?
 - The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
+- The .nvm directory may need to be manually created after being installed with homebrew. Run `brew info nvm` for actual directions
 
 
 
