@@ -39,9 +39,14 @@ This playbook is heavily inspired by others out there to create something that m
 
 ## Mac Config:
 
+### Apps:
 - Arc:
   - Open the App
   - Login ya dingus.
+
+### System Settings:
+- System Settings -> Notifications
+  - Turn Everything Off
 - System Settings -> Siri & Spotlight
   - Turn Off "Ask Siri"
   - Uncheck all options under "Spotlight"
