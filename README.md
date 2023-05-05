@@ -37,7 +37,17 @@ This playbook is heavily inspired by others out there to create something that m
 - The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
 - The .nvm directory may need to be manually created after being installed with homebrew. Run `brew info nvm` for actual directions
 
+## Mac Config:
 
+- Arc:
+  - Open the App
+  - Login ya dingus.
+- System Settings -> Siri & Spotlight
+  - Turn Off "Ask Siri"
+  - Uncheck all options under "Spotlight"
+- System Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
+  - Uncheck "Show Spotlight Search"
+  - Uncheck "Show Finder search window"
 
 
 
