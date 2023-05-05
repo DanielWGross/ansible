@@ -40,9 +40,13 @@ This playbook is heavily inspired by others out there to create something that m
 ## Mac Config:
 
 ### Apps:
+- 1Password:
+  - Open the App.
+  - Login (Note: You will likely need info from another logged in device)
 - Arc:
   - Open the App
-  - Login ya dingus.
+  - Login
+  - Arc -> Set as Default Browser
 
 ### System Settings:
 - System Settings -> Notifications
