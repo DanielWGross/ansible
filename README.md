@@ -29,7 +29,8 @@ This playbook is heavily inspired by others out there to create something that m
 
 
 ## Notes & TODOS
-- Consider setting the default git config pull strategy to rebase
+- Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
+- Make a streamdeck profile and then export it.
 - When running the playbook there are a couple flags you may need...
   - `--ask-vault-pass` to provide your ansible vault password
   - `--ask-become-pass` to provide your system password (for sudo)
