@@ -25,6 +25,8 @@ This playbook is heavily inspired by others out there to create something that m
   - NOTE: Double check the command by visiting `https://brew.sh/` 
 9. Take a look at the output in the terminal as there will be some steps listed under "Nest steps"
 10. Clone this repo
+11. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
+  - Optionally, you can use the `-t` flag to run a specific tag such as: `-t nvm`
 
 
 
