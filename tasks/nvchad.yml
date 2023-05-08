@@ -4,3 +4,4 @@
     dest: "{{ lookup('env', 'HOME') }}/.config/nvim"
     depth: 1
     key_file: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    update: no
