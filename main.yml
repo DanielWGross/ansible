@@ -20,7 +20,7 @@
     tags: git-config
   - import_tasks: tasks/nvm.yml
     tags: nvm
-  - import_tasks: tasks/nvchad.yml
-    tags: nvchad
+  - import_tasks: tasks/font.yml
+    tags: font
       
 
