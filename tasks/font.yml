@@ -4,4 +4,4 @@
     dest: "~/Library/Fonts/"
     mode: 0700
   with_fileglob:
-    - "{{ playbook_dir }}/fonts/.*"
+    - "{{ playbook_dir }}/fonts/*"
