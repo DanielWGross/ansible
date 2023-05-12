@@ -1,0 +1,7 @@
+- name: Copy Font Files
+  copy:
+    src: "{{ item }}"
+    dest: "~/Library/Fonts/"
+    mode: 0700
+  with_fileglob:
+    - "{{ playbook_dir }}/fonts/.*"

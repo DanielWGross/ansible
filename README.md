@@ -71,10 +71,6 @@ This playbook is heavily inspired by others out there to create something that m
 NOTE: Can use `ansible-vault encrypt_string '<string_to_encrypt' --name '<string_name_of_variable>'`
 
 TODO:
-- Use NVM to install Node
-  - Need LTS
-  - Need Whatever Guru Uses
-- Config NVChad
 - Config iTerm
 - Config Oh My Zsh
 - Config Karabiner Elements
