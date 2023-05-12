@@ -69,6 +69,7 @@ This playbook is heavily inspired by others out there to create something that m
 
 
 NOTE: Can use `ansible-vault encrypt_string '<string_to_encrypt' --name '<string_name_of_variable>'`
+NOTE: Can use `ansible-vault encrypt <file>`
 
 TODO:
 - Config iTerm
