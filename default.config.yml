@@ -25,7 +25,6 @@ homebrew_cask_apps:
 homebrew_formulae_apps:
   - heroku
   - neovim
-  - nvm
   - ripgrep
   - tmux
   - watchman

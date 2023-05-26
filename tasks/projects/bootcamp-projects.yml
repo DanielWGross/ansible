@@ -1,7 +1,7 @@
 - name: Scan for SSH host keys for UPENN GitLab
   local_action:
     module: shell
-    cmd: ssh-keyscan upenn.bootcampcontent.com 2>/dev/null
+    cmd: ssh-keyscan git.bootcampcontent.com 2>/dev/null
   changed_when: False
   register: ssh_scan_upenn_gitlab
 
@@ -9,7 +9,7 @@
   local_action:
     module: known_hosts
     key: "{{ item }}"
-    name: "upenn.bootcampcontent.com"
+    name: "git.bootcampcontent.com"
   with_items: "{{ ssh_scan_upenn_gitlab.stdout_lines }}"
 
 - name: Bootcamp - Student Repo - Exists
@@ -19,7 +19,7 @@
 
 - name: Bootcamp - Student Repo
   ansible.builtin.git:
-    repo: git@upenn.bootcampcontent.com:upenn-bootcamp/UPENN-VIRT-FSF-PT-11-2022-U-LOLC.git
+    repo: git@git.bootcampcontent.com:University-of-Pennsylvania/UPENN-VIRT-FSF-PT-05-2023-U-LOLC.git
     dest: "{{ dev }}/bootcamp/student"
     key_file: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
   when: student_repo.stat.exists == False

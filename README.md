@@ -27,7 +27,8 @@ This playbook is heavily inspired by others out there to create something that m
 10. Clone this repo
 11. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
   - Optionally, you can use the `-t` flag to run a specific tag such as: `-t nvm`
-
+12. Install System76 Keyboard Configurator
+  - https://system76.com/accessories/launch/download
 
 
 ## Notes & TODOS

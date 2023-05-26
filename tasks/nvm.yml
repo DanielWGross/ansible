@@ -1,10 +1,11 @@
-- name: Create .nvm directory if it does not exist
-  file:
-    path: "{{ lookup('env', 'HOME') }}/.nvm"
-    state: directory
-    mode: '0755'
+- name: Install nvm
+  ansible.builtin.shell: >
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  args:
+    creates: "{{ ansible_env.HOME }}/.nvm/nvm.sh"
 
 - name: Install Node @ LTS
   shell: source $HOME/.nvm/nvm.sh && nvm install --lts
   args:
     executable: /bin/zsh
+
