@@ -1,5 +1,6 @@
 [user]
 	name = Daniel Gross
+	email = danwgross@gmail.com
 [core]
 	excludesfile=~/.gitignore_global
 [init]
