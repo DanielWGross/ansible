@@ -4,23 +4,23 @@
     - default.config.yml
 
   tasks:
-  - import_tasks: tasks/ssh.yml
-    tags: ssh
-  - import_tasks: tasks/projects/bootcamp-projects.yml
-    tags: projects
-  - import_tasks: tasks/projects/personal-projects.yml
-    tags: projects
-  - import_tasks: tasks/projects/work-projects.yml
-    tags: projects
-  - import_tasks: tasks/homebrew.yml
-    tags: homebrew
-  - import_tasks: tasks/oh-my-zsh.yml
-    tags: oh-my-zsh
-  - import_tasks: tasks/git-config.yml
-    tags: git-config
-  - import_tasks: tasks/nvm.yml
-    tags: nvm
-  - import_tasks: tasks/font.yml
-    tags: font
-      
-
+    - import_tasks: tasks/ssh.yml
+      tags: ssh
+    - import_tasks: tasks/projects/bootcamp-projects.yml
+      tags: projects
+    - import_tasks: tasks/projects/personal-projects.yml
+      tags: projects
+    - import_tasks: tasks/projects/work-projects.yml
+      tags: projects
+    - import_tasks: tasks/homebrew.yml
+      tags: homebrew
+    - import_tasks: tasks/oh-my-zsh.yml
+      tags: oh-my-zsh
+    - import_tasks: tasks/git-config.yml
+      tags: git-config
+    - import_tasks: tasks/nvm.yml
+      tags: nvm
+    - import_tasks: tasks/font.yml
+      tags: font
+    - import_tasks: tasks/karabiner.yml
+      tags: karabiner
