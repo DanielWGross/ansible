@@ -12,47 +12,100 @@ This playbook is heavily inspired by others out there to create something that m
 ## Installation
 
 1. Ensure Apple's command line tools are installed (`xcode-select --install to launch the installer).
-2. Ensure Python3 is installed by running `python3 --version`. 
+2. Ensure Python3 is installed by running `python3 --version`.
 3. Add Python 3 to your $PATH
-  - Create a `.zshrc` in the root directory and add the following line:
-    - `export PATH=$HOME/Library/Python/3.9/bin:$PATH`
-    - NOTE: You may need to confirm the path and version.
+
+- Create a `.zshrc` in the root directory and add the following line:
+  - `export PATH=$HOME/Library/Python/3.9/bin:$PATH`
+  - NOTE: You may need to confirm the path and version.
+
 4. Ensure the `ansible_python_interpreter` path is correct in the `inventory` file
 5. Ensure `pip` is available by running `python3 -m pip -V`.
 6. Install Ansible by running `python3 -m pip install ansible`
 7. Confirm Ansible installation by running `ansible --version`
 8. Install Homebrew by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-  - NOTE: Double check the command by visiting `https://brew.sh/` 
+
+- NOTE: Double check the command by visiting `https://brew.sh/`
+
 9. Take a look at the output in the terminal as there will be some steps listed under "Nest steps"
 10. Clone this repo
 11. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
-  - Optionally, you can use the `-t` flag to run a specific tag such as: `-t nvm`
-12. Install System76 Keyboard Configurator
-  - https://system76.com/accessories/launch/download
 
+- Optionally, you can use the `-t` flag to run a specific tag such as: `-t nvm`
+
+12. Install System76 Keyboard Configurator
+
+- https://system76.com/accessories/launch/download
 
 ## Notes & TODOS
+
 - Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
 - Make a streamdeck profile and then export it.
 - When running the playbook there are a couple flags you may need...
   - `--ask-vault-pass` to provide your ansible vault password
   - `--ask-become-pass` to provide your system password (for sudo)
-  - These could *probably* just be vaulted, right?
+  - These could _probably_ just be vaulted, right?
 - The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
 - The .nvm directory may need to be manually created after being installed with homebrew. Run `brew info nvm` for actual directions
 
 ## Mac Config:
 
 ### Apps:
+
 - 1Password:
   - Open the App.
-  - Login (Note: You will likely need info from another logged in device)
+  - Use ansible-vault to decrypt the emergency kit and sign-in
+- Alfred
+  - Open the App
+  - Not using Powerpacks (currently)
+  - Configure MacOS Permissions prompts
+  - Disable Spotlight Search
+    - System Settings -> Keyboard -> Keyboard Shortcuts... -> Spotlight
+      - Uncheck Show Spotlight Search
+      - Uncheck Show Finder search window
+  - Enable Alfred Hotkey -> Command + Space
 - Arc:
   - Open the App
   - Login
   - Arc -> Set as Default Browser
+  - Add 1Password Extension
+- Discord:
+  - Open the App
+- Elgato Facecam
+  - Open the App
+  - Update firmware
+- Elgato Control Center
+  - Preferences:
+    - Enable Link Accessory Controls
+    - Check for Updates
+    - Enable Automatically check for updates
+    - Enable Open automatically on Log In
+- Elgato Wave Link:
+  - Preferences:
+    - Check for Updates
+- Hey:
+  - Open the App
+  - Login
+- Insomina:
+  - Open the App
+  - Login
+- iTerm
+  - Profiles -> Other Actions -> Import JSON Profiles
+- VSCode
+  - Open the App
+  - Enable Settings Sync
+
+### Terminal System Settings:
+
+- Disable press-and-hold for keys in favor of key repeat
+- `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
+
+- Set a blazingly fast keyboard repeat rate
+- `defaults write NSGlobalDomain KeyRepeat -int 1`
+- `defaults write NSGlobalDomain InitialKeyRepeat -int 10`
 
 ### System Settings:
+
 - System Settings -> Notifications
   - Turn Everything Off
 - System Settings -> Siri & Spotlight
@@ -62,17 +115,11 @@ This playbook is heavily inspired by others out there to create something that m
   - Uncheck "Show Spotlight Search"
   - Uncheck "Show Finder search window"
 
-
-
-
-
-
-
-
 NOTE: Can use `ansible-vault encrypt_string '<string_to_encrypt' --name '<string_name_of_variable>'`
 NOTE: Can use `ansible-vault encrypt <file>`
 
 TODO:
+
 - Config iTerm
 - Config Oh My Zsh
 - Config Karabiner Elements
