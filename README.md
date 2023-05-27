@@ -9,6 +9,14 @@ This playbook is heavily inspired by others out there to create something that m
 - [Robin Wieruch Mac Setup - Non-Ansible](https://www.robinwieruch.de/mac-setup-web-development/)
 - [Mina Markham Formation - Non-Ansible](https://github.com/minamarkham/formation)
 
+## Ansible Commands:
+
+There are a few ansible commands that will be useful.
+
+- `--ask-vault-pass` to provide your ansible vault password
+- `--ask-become-pass` to provide your system password (for sudo)
+- `-t` flag to run a specific tag such as: `-t nvm`
+
 ## Installation
 
 1. Ensure Apple's command line tools are installed (`xcode-select --install to launch the installer).
@@ -31,8 +39,6 @@ This playbook is heavily inspired by others out there to create something that m
 10. Clone this repo
 11. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
 
-- Optionally, you can use the `-t` flag to run a specific tag such as: `-t nvm`
-
 12. Install System76 Keyboard Configurator
 
 - https://system76.com/accessories/launch/download
@@ -41,9 +47,6 @@ This playbook is heavily inspired by others out there to create something that m
 
 - Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
 - Make a streamdeck profile and then export it.
-- When running the playbook there are a couple flags you may need...
-  - `--ask-vault-pass` to provide your ansible vault password
-  - `--ask-become-pass` to provide your system password (for sudo)
   - These could _probably_ just be vaulted, right?
 - The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
 - The .nvm directory may need to be manually created after being installed with homebrew. Run `brew info nvm` for actual directions
@@ -84,13 +87,22 @@ This playbook is heavily inspired by others out there to create something that m
   - Preferences:
     - Check for Updates
 - Hey:
+
   - Open the App
   - Login
+
 - Insomina:
   - Open the App
   - Login
-- iTerm
+- iTerm:
+
   - Profiles -> Other Actions -> Import JSON Profiles
+  - Import the iterm_default_profile.json file
+
+- Karabiner Elements:
+
+  - There is an ansible task to copy over the config. Ensure this is working correctly
+
 - VSCode
   - Open the App
   - Enable Settings Sync
