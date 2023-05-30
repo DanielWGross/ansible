@@ -18,7 +18,6 @@ homebrew_cask_apps:
   - hey
   - insomnia
   - iterm2
-  - karabiner-elements
   - rectangle-pro
   - switchresx
   - visual-studio-code
