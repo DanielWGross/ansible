@@ -105,10 +105,14 @@ There are a few ansible commands that will be useful.
   - Profiles -> Other Actions -> Import JSON Profiles
   - Import the iterm_default_profile.json file
 
-- Karabiner Elements:
+- Rectangle Pro:
 
-  - There is an ansible task to copy over the config. Ensure this is working correctly
+  - Open the App
+  - Add License Key (In backup_codes directory)
 
+- SwitchResX
+  - Open the App
+  - Add License Key (In backup_codes directory)
 - VSCode
   - Open the App
   - Enable Settings Sync
