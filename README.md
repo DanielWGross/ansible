@@ -43,6 +43,10 @@ There are a few ansible commands that will be useful.
 
 - https://system76.com/accessories/launch/download
 
+13. Install Charmstone
+
+- https://charmstone.app/
+
 ## Notes & TODOS
 
 - Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
@@ -72,6 +76,8 @@ There are a few ansible commands that will be useful.
   - Login
   - Arc -> Set as Default Browser
   - Add 1Password Extension
+- Charmstone
+  - https://charmstone.app/
 - Discord:
   - Open the App
 - Elgato Facecam
