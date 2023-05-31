@@ -1,15 +1,37 @@
 # CURRENTLY DOING:
 
-- The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
-  - Reviewing oh-my-zsh plugins - Start back up at the letter "r"
+- Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
+
+Terminal System Settings:
+
+- Disable press-and-hold for keys in favor of key repeat
+- `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
+
+- Set a blazingly fast keyboard repeat rate
+- `defaults write NSGlobalDomain KeyRepeat -int 1`
+- `defaults write NSGlobalDomain InitialKeyRepeat -int 10`
+
+System Settings:
+
+- System Settings -> Notifications
+  - Turn Everything Off
+- System Settings -> Siri & Spotlight
+  - Turn Off "Ask Siri"
+  - Uncheck all options under "Spotlight"
+- System Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
+  - Uncheck "Show Spotlight Search"
+  - Uncheck "Show Finder search window"
 
 # NEXT TO DO:
 
-- Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
+- Install Powerlevel 10k
+  - https://github.com/romkatv/powerlevel10k
 - Neovim Config
 - Config Oh My Zsh
 - Config Tmux
 - Dell Display Switcher w/ Stream Deck?
+- The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
+- Updates hosts file with task (currently not working)
 
 ## Introduction
 
@@ -131,23 +153,3 @@ There are a few ansible commands that will be useful.
 - VSCode
   - Open the App
   - Enable Settings Sync
-
-### Terminal System Settings:
-
-- Disable press-and-hold for keys in favor of key repeat
-- `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
-
-- Set a blazingly fast keyboard repeat rate
-- `defaults write NSGlobalDomain KeyRepeat -int 1`
-- `defaults write NSGlobalDomain InitialKeyRepeat -int 10`
-
-### System Settings:
-
-- System Settings -> Notifications
-  - Turn Everything Off
-- System Settings -> Siri & Spotlight
-  - Turn Off "Ask Siri"
-  - Uncheck all options under "Spotlight"
-- System Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
-  - Uncheck "Show Spotlight Search"
-  - Uncheck "Show Finder search window"

@@ -22,3 +22,5 @@
       tags: nvm
     - import_tasks: tasks/font.yml
       tags: font
+    - import_tasks: tasks/hosts.yml
+      tags: hosts
