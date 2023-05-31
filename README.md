@@ -1,3 +1,16 @@
+# CURRENTLY DOING:
+
+- The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
+  - Reviewing oh-my-zsh plugins - Start back up at the letter "r"
+
+# NEXT TO DO:
+
+- Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
+- Neovim Config
+- Config Oh My Zsh
+- Config Tmux
+- Dell Display Switcher w/ Stream Deck?
+
 ## Introduction
 
 This playbook is heavily inspired by others out there to create something that made sense for me. Few resouces I used along the way...
@@ -16,6 +29,9 @@ There are a few ansible commands that will be useful.
 - `--ask-vault-pass` to provide your ansible vault password
 - `--ask-become-pass` to provide your system password (for sudo)
 - `-t` flag to run a specific tag such as: `-t nvm`
+- `ansible-vault` to encrypt or decrypt files
+  - Example: `ansible-vault encrypt_string '<string_to_encrypt' --name '<string_name_of_variable>'`
+  - Example: `ansible-vault encrypt <file>`
 
 ## Installation
 
@@ -46,14 +62,6 @@ There are a few ansible commands that will be useful.
 13. Install Charmstone
 
 - https://charmstone.app/
-
-## Notes & TODOS
-
-- Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
-- Make a streamdeck profile and then export it.
-  - These could _probably_ just be vaulted, right?
-- The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
-- The .nvm directory may need to be manually created after being installed with homebrew. Run `brew info nvm` for actual directions
 
 ## Mac Config:
 
@@ -90,8 +98,15 @@ There are a few ansible commands that will be useful.
     - Enable Automatically check for updates
     - Enable Open automatically on Log In
 - Elgato Wave Link:
+
   - Preferences:
     - Check for Updates
+
+- Heroku:
+
+  - Run `heroku update`
+  - Run `heroku login`
+
 - Hey:
 
   - Open the App
@@ -136,17 +151,3 @@ There are a few ansible commands that will be useful.
 - System Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
   - Uncheck "Show Spotlight Search"
   - Uncheck "Show Finder search window"
-
-NOTE: Can use `ansible-vault encrypt_string '<string_to_encrypt' --name '<string_name_of_variable>'`
-NOTE: Can use `ansible-vault encrypt <file>`
-
-TODO:
-
-- Config iTerm
-- Config Oh My Zsh
-- Config Karabiner Elements
-- Take Current Config & Add to Ansible
-  - Make a task to copy to ~/.config/karabiner/
-- Config Rectangle Pro
-  - Make a task to copy to ~/Library/Application Support/Rectangle Pro/RectangleProConfig.json
-- Config Tmux

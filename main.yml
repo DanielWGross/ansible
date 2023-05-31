@@ -22,5 +22,3 @@
       tags: nvm
     - import_tasks: tasks/font.yml
       tags: font
-    - import_tasks: tasks/karabiner.yml
-      tags: karabiner
