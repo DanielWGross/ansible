@@ -21,6 +21,8 @@ System Settings:
 - System Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
   - Uncheck "Show Spotlight Search"
   - Uncheck "Show Finder search window"
+- System Settings -> Keyboard -> Dictation:
+  - Change Shortcut to "Press Microphone"
 
 # NEXT TO DO:
 
