@@ -6,6 +6,7 @@ homebrew_cask_apps:
   - 1password
   - alfred
   - arc
+  - ddpm
   - discord
   - elgato-camera-hub
   - elgato-control-center
@@ -19,6 +20,7 @@ homebrew_cask_apps:
   - hyperkey
   - insomnia
   - iterm2
+  - loom
   - rectangle-pro
   - switchresx
   - visual-studio-code
