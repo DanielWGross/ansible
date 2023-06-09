@@ -31,9 +31,8 @@ System Settings:
 - Neovim Config
 - Config Oh My Zsh
 - Config Tmux
-- Dell Display Switcher w/ Stream Deck?
 - The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
-- Updates hosts file with task (currently not working)
+- Export Stream Deck Config
 
 ## Introduction
 
@@ -110,6 +109,9 @@ There are a few ansible commands that will be useful.
   - Add 1Password Extension
 - Charmstone
   - https://charmstone.app/
+- Dell Display and Peripheral Manager
+  - `ctrl` + `cmd` + `t`: Toggle Inputs (USB-C -> HDMI)
+  - May not be necessary but double-check the firmware for the monitor to see if it can be upgraded
 - Discord:
   - Open the App
 - Elgato Facecam
@@ -144,6 +146,10 @@ There are a few ansible commands that will be useful.
   - Profiles -> Other Actions -> Import JSON Profiles
   - Import the iterm_default_profile.json file
 
+- Loom
+  - Open the App
+  - Login with SSO
+  - Enable all necessary permissions
 - Rectangle Pro:
 
   - Open the App
