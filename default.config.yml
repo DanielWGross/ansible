@@ -21,12 +21,16 @@ homebrew_cask_apps:
   - insomnia
   - iterm2
   - loom
+  - obsidian
   - rectangle-pro
   - switchresx
   - visual-studio-code
 homebrew_formulae_apps:
+  - awscli
   - heroku
   - neovim
+  - opam
+  - pipx
   - ripgrep
   - tmux
   - watchman
