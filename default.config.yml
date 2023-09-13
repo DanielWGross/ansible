@@ -24,6 +24,7 @@ homebrew_cask_apps:
   - obsidian
   - rectangle-pro
   - switchresx
+  - synologyassistant
   - visual-studio-code
 homebrew_formulae_apps:
   - awscli
