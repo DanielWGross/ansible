@@ -20,14 +20,14 @@ homebrew_cask_apps:
   - hyperkey
   - insomnia
   - iterm2
-  - loom
+  # - loom
   - obsidian
   - rectangle-pro
   - switchresx
   - synologyassistant
   - visual-studio-code
 homebrew_formulae_apps:
-  - awscli
+  # - awscli
   - heroku
   - neovim
   - opam
