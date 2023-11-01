@@ -159,6 +159,8 @@ There are a few ansible commands that will be useful.
 
 - Rectangle Pro:
   - Open the App
+  - Enable permissions
+  - Check "Launch Rectangle Pro on login"
   - Add License Key (In backup_codes directory)
 
 - Slack
