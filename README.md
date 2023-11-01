@@ -149,8 +149,8 @@ There are a few ansible commands that will be useful.
   - Open the App
   - Login with SSO
   - Enable all necessary permissions
-- Rectangle Pro:
 
+- Rectangle Pro:
   - Open the App
   - Add License Key (In backup_codes directory)
 
@@ -162,6 +162,12 @@ There are a few ansible commands that will be useful.
 - SwitchResX
   - Open the App
   - Add License Key (In backup_codes directory)
+
 - VSCode
   - Open the App
   - Enable Settings Sync
+ 
+- Zoom
+  - Open the App
+  - Uncheck "Automatically keep Zoom desktop client up to date"
+  - Login with 2U Zoom info
