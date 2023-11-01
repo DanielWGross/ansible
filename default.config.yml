@@ -22,7 +22,8 @@ homebrew_cask_apps:
   - insomnia
   - iterm2
   # - loom
-  - obsidian
+  # - obsidian
+  - omnifocus
   - rectangle-pro
   - slack
   - switchresx
