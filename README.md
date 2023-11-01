@@ -154,6 +154,11 @@ There are a few ansible commands that will be useful.
   - Open the App
   - Add License Key (In backup_codes directory)
 
+- Slack
+  - Login with 2U email address
+  - Add current cohort Slack workspace and Pink Brain
+  - Enter 2FA in Pink Brain
+
 - SwitchResX
   - Open the App
   - Add License Key (In backup_codes directory)
