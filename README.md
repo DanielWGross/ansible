@@ -207,6 +207,8 @@ There are a few ansible commands that will be useful.
   - Open the App
   - Uncheck "Automatically keep Zoom desktop client up to date"
   - Login with 2U Zoom info
+  - Make sure to check "Stay Signed in"
   - Settings:
     - General
-      - Use dual monitors checked    
+      - Use dual monitors checked
+  - System Preferences -> Privacy & Security -> Screen Recording -> Allow Zoom
