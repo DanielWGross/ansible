@@ -122,19 +122,20 @@ There are a few ansible commands that will be useful.
 - Elgato Facecam
   - Open the App
   - Update firmware
+
 - Elgato Control Center
+  - Open the App
   - Preferences:
     - Enable Link Accessory Controls
     - Check for Updates
-    - Enable Automatically check for updates
+    - Disable Automatically check for updates
     - Enable Open automatically on Log In
-- Elgato Wave Link:
 
+- Elgato Wave Link:
   - Preferences:
     - Check for Updates
 
 - Heroku:
-
   - Run `heroku update`
   - Run `heroku login`
 
