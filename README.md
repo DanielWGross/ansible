@@ -69,10 +69,12 @@ There are a few ansible commands that will be useful.
 - NOTE: Double check the command by visiting `https://brew.sh/`
 
 9. Take a look at the output in the terminal as there will be some steps listed under "Nest steps"
-10. Clone this repo
-11. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
+  - Add Homebrew to your PATH
+  - Confirm install by running `brew help`
+11. Clone this repo
+12. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
 
-12. Install System76 Keyboard Configurator
+13. Install System76 Keyboard Configurator
 
 - https://system76.com/accessories/launch/download
 
