@@ -9,5 +9,3 @@
   path = .gitconfig_bootcamp
 [includeIf "gitdir:~/dev/personal/"]
   path = .gitconfig_personal
-[includeIf "gitdir:~/dev/guru/"]
-  path = .gitconfig_guru
