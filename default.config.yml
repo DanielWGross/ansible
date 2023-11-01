@@ -16,6 +16,7 @@ homebrew_cask_apps:
   - font-fira-code-nerd-font
   - font-jetbrains-mono
   - font-montserrat
+  - google-chrome
   - hey
   - hyperkey
   - insomnia
@@ -23,6 +24,7 @@ homebrew_cask_apps:
   # - loom
   - obsidian
   - rectangle-pro
+  - slack
   - switchresx
   - synologyassistant
   - visual-studio-code
