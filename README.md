@@ -2,27 +2,20 @@
 
 - Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
 
-Terminal System Settings:
-
-- Disable press-and-hold for keys in favor of key repeat
-- `defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false`
-
-- Set a blazingly fast keyboard repeat rate
-- `defaults write NSGlobalDomain KeyRepeat -int 1`
-- `defaults write NSGlobalDomain InitialKeyRepeat -int 10`
-
 System Settings:
 
+- System Settings -> Keyboard
+  - Set Key repeat rate to "Fast"
+  - Set Delay until repeat to "Short"
+  - Change Shortcut to "Off"
+  - Keyboard Shortcuts -> Spotlight
+    - Uncheck "Show Spotlight Search"
+    - Uncheck "Show Finder search window"
 - System Settings -> Notifications
   - Turn Everything Off
 - System Settings -> Siri & Spotlight
   - Turn Off "Ask Siri"
   - Uncheck all options under "Spotlight"
-- System Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight
-  - Uncheck "Show Spotlight Search"
-  - Uncheck "Show Finder search window"
-- System Settings -> Keyboard -> Dictation:
-  - Change Shortcut to "Press Microphone"
 
 # NEXT TO DO:
 
