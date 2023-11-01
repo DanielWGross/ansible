@@ -28,6 +28,7 @@ homebrew_cask_apps:
   - switchresx
   - synologyassistant
   - visual-studio-code
+  - zoom
 homebrew_formulae_apps:
   # - awscli
   - heroku
