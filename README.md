@@ -190,7 +190,10 @@ There are a few ansible commands that will be useful.
 
 - VSCode
   - Open the App
-  - Enable Settings Sync
+  - Settings Sync:
+    - Click "Backup and Sync Settings"
+    - Click "Sign in"
+    - Click "Sign in with GitHub"
  
 - Zoom
   - Open the App
