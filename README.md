@@ -52,7 +52,7 @@ There are a few ansible commands that will be useful.
 ## Installation
 
 1. Ensure there are no pending software updates.
-2. Ensure Apple's command line tools are installed (`xcode-select --install to launch the installer).
+2. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
 3. Ensure Python3 is installed by running `python3 --version`.
 4. Add Python 3 to your $PATH
 
