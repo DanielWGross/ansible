@@ -19,6 +19,7 @@ System Settings:
 
 # NEXT TO DO:
 
+- Look into Synergy by symless. symless.com
 - Install Powerlevel 10k
   - https://github.com/romkatv/powerlevel10k
 - Neovim Config
