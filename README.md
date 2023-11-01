@@ -140,9 +140,20 @@ There are a few ansible commands that will be useful.
   - Run `heroku login`
 
 - Hey:
-
   - Open the App
   - Login
+
+- Hyperkey
+  - Open the App
+  - Enable permissions
+  - Set the following:
+    - Enable "Remap physical key to hyper key: caps lock"
+    - Disable "Quick press caps lock to execute"
+    - Enable "Include shift in hyper key"
+    - Uncheck all "Apply hyper key modifiers to keypress and:"
+    - Enable "Launch on login"
+    - Disable "Check for updates automatically"
+    - Disable "Hide menu bar icon"
 
 - Insomina:
   - Open the App
@@ -161,7 +172,12 @@ There are a few ansible commands that will be useful.
   - Open the App
   - Enable permissions
   - Check "Launch Rectangle Pro on login"
-  - Add License Key (In backup_codes directory)
+  - Import Config (file in this repo)
+  - Activate Rectangle Pro
+    - Click "Purchase"
+    - Click "Activate License"
+    - Add Email - danwgross@gmail.com
+    - Add License Key (In backup_codes directory)
 
 - Slack
   - Login with 2U email address
