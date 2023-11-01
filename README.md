@@ -113,6 +113,12 @@ There are a few ansible commands that will be useful.
   - May not be necessary but double-check the firmware for the monitor to see if it can be upgraded
 - Discord:
   - Open the App
+ 
+- Elgato Camer Hub
+  - Open the App
+  - Set Zoom/FOV to 170%
+  - Set Preview Format to 1080p60
+     
 - Elgato Facecam
   - Open the App
   - Update firmware
