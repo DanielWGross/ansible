@@ -4,6 +4,14 @@
 
 System Settings:
 
+- System Settings -> Dock
+  - Size - Medium
+  - Magnification - Off
+  - Position on screen - Right
+  - Uncheck "Animate opening applications"
+  - Uncheck "Show indicators for open applications"
+  - Uncheck "Show suggested and recent apps in Dock"
+  - Click wallpaper to reveal desktop - "Only in Stage Manager"
 - System Settings -> Keyboard
   - Set Key repeat rate to "Fast"
   - Set Delay until repeat to "Short"
@@ -199,3 +207,6 @@ There are a few ansible commands that will be useful.
   - Open the App
   - Uncheck "Automatically keep Zoom desktop client up to date"
   - Login with 2U Zoom info
+  - Settings:
+    - General
+      - Use dual monitors checked    
