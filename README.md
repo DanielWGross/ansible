@@ -79,6 +79,8 @@ There are a few ansible commands that will be useful.
 - https://system76.com/accessories/launch/download
 
 13. Install Charmstone
+14. DDPM install failed because of Rosetta 2 needed. Look into this.
+  - `sudo softwareupdate --install-rosetta`
 
 - https://charmstone.app/
 
