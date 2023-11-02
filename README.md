@@ -64,22 +64,21 @@ There are a few ansible commands that will be useful.
 1. Ensure there are no pending software updates.
 2. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
 3. Install Rosetta 2 (`sudo softwareupdate --install-rosetta`)
-3. Ensure Python3 is installed by running `python3 --version`.
-4. Create a `.zshrc` in the root directory and add the following line to add Python 3 to your PATH
+4. Ensure Python3 is installed by running `python3 --version`.
+5. Create a `.zshrc` in the root directory and add the following line to add Python 3 to your PATH
   - `export PATH=$HOME/Library/Python/3.9/bin:$PATH`
   - NOTE: You may need to confirm the path and version.
-5. Ensure the `ansible_python_interpreter` path is correct in the `inventory` file
-6. Ensure `pip` is available by running `python3 -m pip -V`.
-7. Install Ansible by running `python3 -m pip install ansible`
-8. Confirm Ansible installation by running `ansible --version`
-9. Install Homebrew by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-10. Add Homebrew to your PATH (See Next Steps from step above)
-11. Confirm install by running `brew help`
-12. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
-13. Install [System76 Keyboard Configurator](https://system76.com/accessories/launch/download)
-14. Install [Synergy](https://symless.com/synergy/download) 
-15. Install [Charmstone](https://charmstone.app/)
-
+6. Ensure the `ansible_python_interpreter` path is correct in the `inventory` file
+7. Ensure `pip` is available by running `python3 -m pip -V`.
+8. Install Ansible by running `python3 -m pip install ansible`
+9. Confirm Ansible installation by running `ansible --version`
+10. Install Homebrew by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+11. Add Homebrew to your PATH (See Next Steps from step above)
+12. Confirm install by running `brew help`
+13. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
+14. Install [System76 Keyboard Configurator](https://system76.com/accessories/launch/download)
+15. Install [Synergy](https://symless.com/synergy/download) 
+16. Install [Charmstone](https://charmstone.app/)
 
 ## Mac Config:
 
