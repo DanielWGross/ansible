@@ -79,18 +79,24 @@ There are a few ansible commands that will be useful.
 - NOTE: Double check the command by visiting `https://brew.sh/`
 
 9. Take a look at the output in the terminal as there will be some steps listed under "Nest steps"
-  - Add Homebrew to your PATH
-  - Confirm install by running `brew help`
+
+- Add Homebrew to your PATH
+- Confirm install by running `brew help`
+
 11. Clone this repo
 12. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
+13. Start MongoDB Server on System Startup
 
-13. Install System76 Keyboard Configurator
+- `brew services start mongodb/brew/mongodb-community`
+
+14. Install System76 Keyboard Configurator
 
 - https://system76.com/accessories/launch/download
 
-13. Install Charmstone
-14. DDPM install failed because of Rosetta 2 needed. Look into this.
-  - `sudo softwareupdate --install-rosetta`
+15. Install Charmstone
+16. DDPM install failed because of Rosetta 2 needed. Look into this.
+
+- `sudo softwareupdate --install-rosetta`
 
 - https://charmstone.app/
 
@@ -121,18 +127,20 @@ There are a few ansible commands that will be useful.
   - `ctrl` + `cmd` + `t`: Toggle Inputs (USB-C -> HDMI)
   - May not be necessary but double-check the firmware for the monitor to see if it can be upgraded
 - Discord:
+
   - Open the App
- 
+
 - Elgato Camer Hub
   - Open the App
   - Set Zoom/FOV to 170%
   - Set Preview Format to 1080p60
-     
 - Elgato Facecam
+
   - Open the App
   - Update firmware
 
 - Elgato Control Center
+
   - Open the App
   - Preferences:
     - Enable Link Accessory Controls
@@ -141,18 +149,22 @@ There are a few ansible commands that will be useful.
     - Enable Open automatically on Log In
 
 - Elgato Wave Link:
+
   - Preferences:
     - Check for Updates
 
 - Heroku:
+
   - Run `heroku update`
   - Run `heroku login`
 
 - Hey:
+
   - Open the App
   - Login
 
 - Hyperkey
+
   - Open the App
   - Enable permissions
   - Set the following:
@@ -173,11 +185,13 @@ There are a few ansible commands that will be useful.
   - Import the iterm_default_profile.json file
 
 - Loom
+
   - Open the App
   - Login with SSO
   - Enable all necessary permissions
 
 - Rectangle Pro:
+
   - Open the App
   - Enable permissions
   - Check "Launch Rectangle Pro on login"
@@ -189,21 +203,24 @@ There are a few ansible commands that will be useful.
     - Add License Key (In backup_codes directory)
 
 - Slack
+
   - Login with 2U email address
   - Add current cohort Slack workspace and Pink Brain
   - Enter 2FA in Pink Brain
 
 - SwitchResX
+
   - Open the App
   - Add License Key (In backup_codes directory)
 
 - VSCode
+
   - Open the App
   - Settings Sync:
     - Click "Backup and Sync Settings"
     - Click "Sign in"
     - Click "Sign in with GitHub"
- 
+
 - Zoom
   - Open the App
   - Uncheck "Automatically keep Zoom desktop client up to date"

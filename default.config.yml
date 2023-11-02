@@ -2,6 +2,7 @@ dev: "{{ lookup('env', 'HOME') }}/dev"
 homebrew_tap_apps:
   - homebrew/cask-fonts
   - heroku/brew
+  - mongodb/brew
 homebrew_cask_apps:
   - 1password
   - alfred
