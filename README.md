@@ -1,41 +1,18 @@
-# CURRENTLY DOING:
-
-- Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
-
-System Settings:
-
-- System Settings -> Dock
-  - Size - Medium
-  - Magnification - Off
-  - Position on screen - Right
-  - Uncheck "Animate opening applications"
-  - Uncheck "Show indicators for open applications"
-  - Uncheck "Show suggested and recent apps in Dock"
-  - Click wallpaper to reveal desktop - "Only in Stage Manager"
-- System Settings -> Keyboard
-  - Set Key repeat rate to "Fast"
-  - Set Delay until repeat to "Short"
-  - Change Shortcut to "Off"
-  - Keyboard Shortcuts -> Spotlight
-    - Uncheck "Show Spotlight Search"
-    - Uncheck "Show Finder search window"
-- System Settings -> Notifications
-  - Turn Everything Off
-- System Settings -> Siri & Spotlight
-  - Turn Off "Ask Siri"
-  - Uncheck all options under "Spotlight"
 
 # NEXT TO DO:
 
+- Mac settings - Create a screenshot folder somewhere instead of dumping on desktop
 - Look into Warp (again)
-- Look into Synergy by symless. symless.com
 - Install Powerlevel 10k
   - https://github.com/romkatv/powerlevel10k
 - Neovim Config
 - Config Oh My Zsh
 - Config Tmux
+    - https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/
+    - https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 - The .zshrc file, once "complete", should probably just be on github and then a task to copy it over to where it needs to go.
 - Export Stream Deck Config
+- You Don't Need NERDTree - https://shapeshed.com/vim-netrw/
 
 ## Introduction
 
@@ -59,52 +36,60 @@ There are a few ansible commands that will be useful.
   - Example: `ansible-vault encrypt_string '<string_to_encrypt' --name '<string_name_of_variable>'`
   - Example: `ansible-vault encrypt <file>`
 
+## Pre-Install Setup
+
+- System Settings -> Dock
+  - Size - Medium
+  - Magnification - Off
+  - Position on screen - Right
+  - Uncheck "Animate opening applications"
+  - Uncheck "Show indicators for open applications"
+  - Uncheck "Show suggested and recent apps in Dock"
+  - Click wallpaper to reveal desktop - "Only in Stage Manager"
+- System Settings -> Keyboard
+  - Set Key repeat rate to "Fast"
+  - Set Delay until repeat to "Short"
+  - Change Shortcut to "Off"
+  - Keyboard Shortcuts -> Spotlight
+    - Uncheck "Show Spotlight Search"
+    - Uncheck "Show Finder search window"
+- System Settings -> Notifications
+  - Turn Everything Off
+- System Settings -> Siri & Spotlight
+  - Turn Off "Ask Siri"
+  - Uncheck all options under "Spotlight"
+
 ## Installation
 
 1. Ensure there are no pending software updates.
 2. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
+3. Install Rosetta 2 (`sudo softwareupdate --install-rosetta`)
 3. Ensure Python3 is installed by running `python3 --version`.
-4. Add Python 3 to your $PATH
-
-- Create a `.zshrc` in the root directory and add the following line:
+4. Create a `.zshrc` in the root directory and add the following line to add Python 3 to your PATH
   - `export PATH=$HOME/Library/Python/3.9/bin:$PATH`
   - NOTE: You may need to confirm the path and version.
-
-4. Ensure the `ansible_python_interpreter` path is correct in the `inventory` file
-5. Ensure `pip` is available by running `python3 -m pip -V`.
-6. Install Ansible by running `python3 -m pip install ansible`
-7. Confirm Ansible installation by running `ansible --version`
-8. Install Homebrew by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
-
-- NOTE: Double check the command by visiting `https://brew.sh/`
-
-9. Take a look at the output in the terminal as there will be some steps listed under "Nest steps"
-
-- Add Homebrew to your PATH
-- Confirm install by running `brew help`
-
-11. Clone this repo
+5. Ensure the `ansible_python_interpreter` path is correct in the `inventory` file
+6. Ensure `pip` is available by running `python3 -m pip -V`.
+7. Install Ansible by running `python3 -m pip install ansible`
+8. Confirm Ansible installation by running `ansible --version`
+9. Install Homebrew by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+10. Add Homebrew to your PATH (See Next Steps from step above)
+11. Confirm install by running `brew help`
 12. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
+13. Install [System76 Keyboard Configurator](https://system76.com/accessories/launch/download)
+14. Install [Synergy](https://symless.com/synergy/download) 
+15. Install [Charmstone](https://charmstone.app/)
 
-13. Install System76 Keyboard Configurator
-
-- https://system76.com/accessories/launch/download
-
-15. Install Charmstone
-16. DDPM install failed because of Rosetta 2 needed. Look into this.
-
-- `sudo softwareupdate --install-rosetta`
-
-- https://charmstone.app/
 
 ## Mac Config:
 
 ### Apps:
 
-- 1Password:
+#### 1Password:
   - Open the App.
   - Use ansible-vault to decrypt the emergency kit and sign-in
-- Alfred
+
+#### Alfred
   - Open the App
   - Not using Powerpacks (currently)
   - Configure MacOS Permissions prompts
@@ -113,32 +98,30 @@ There are a few ansible commands that will be useful.
       - Uncheck Show Spotlight Search
       - Uncheck Show Finder search window
   - Enable Alfred Hotkey -> Command + Space
-- Arc:
+
+#### Arc:
   - Open the App
   - Login
   - Arc -> Set as Default Browser
   - Add 1Password Extension
-- Charmstone
-  - https://charmstone.app/
+
+#### Charmstone
   - Configure based on the screenshot in the `screenshot` directory
-- Dell Display and Peripheral Manager
+
+#### Dell Display and Peripheral Manager (DDPM)
   - `ctrl` + `cmd` + `t`: Toggle Inputs (USB-C -> HDMI)
   - May not be necessary but double-check the firmware for the monitor to see if it can be upgraded
-- Discord:
 
+#### Discord:
   - Open the App
 
-- Elgato Camer Hub
+#### Elgato Camera Hub
   - Open the App
   - Set Zoom/FOV to 170%
   - Set Preview Format to 1080p60
-- Elgato Facecam
 
-  - Open the App
-  - Update firmware
 
-- Elgato Control Center
-
+#### Elgato Control Center
   - Open the App
   - Preferences:
     - Enable Link Accessory Controls
@@ -146,23 +129,23 @@ There are a few ansible commands that will be useful.
     - Disable Automatically check for updates
     - Enable Open automatically on Log In
 
-- Elgato Wave Link:
+#### Elgato Stream Deck:
+- Open the App
+- Import Profile (Profile in this repo)
 
+#### Elgato Wave Link:
   - Preferences:
     - Check for Updates
 
-- Heroku:
-
+#### Heroku:
   - Run `heroku update`
   - Run `heroku login`
 
-- Hey:
-
+#### Hey:
   - Open the App
   - Login
 
-- Hyperkey
-
+#### Hyperkey
   - Open the App
   - Enable permissions
   - Set the following:
@@ -174,29 +157,37 @@ There are a few ansible commands that will be useful.
     - Disable "Check for updates automatically"
     - Disable "Hide menu bar icon"
 
-- Insomina:
+#### Insomina:
   - Open the App
-  - Login
-- iTerm:
+  - Login with GitHub
 
+#### iTerm:
   - Profiles -> Other Actions -> Import JSON Profiles
   - Import the iterm_default_profile.json file
 
-- Loom
-
-  - Open the App
-  - Login with SSO
-  - Enable all necessary permissions
-
-- MongoDB
-
+#### MongoDB
   - Start MongoDB Server on System Startup
     - `brew services start mongodb/brew/mongodb-community`
 
-- MongoDB Compass
+#### MongoDB Compass
   - Open the App
-- Rectangle Pro:
 
+#### Omnifocus
+  - Open the App
+  - General:
+    - Quick Entry Shortcut: `Ctrl + Option + O`
+    - Clippings Shortcut: `Hyper + O`
+  - Style
+    - Font size: Large
+  - Notifications:
+    - Set to "Alerts"
+    - Enable everything
+  - Badges:
+    - Enable everything
+  - Update
+    - Uncheck "Check for updates"
+
+#### Rectangle Pro:
   - Open the App
   - Enable permissions
   - Check "Launch Rectangle Pro on login"
@@ -207,26 +198,23 @@ There are a few ansible commands that will be useful.
     - Add Email - danwgross@gmail.com
     - Add License Key (In backup_codes directory)
 
-- Slack
-
+#### Slack
   - Login with 2U email address
   - Add current cohort Slack workspace and Pink Brain
   - Enter 2FA in Pink Brain
 
-- SwitchResX
-
+#### SwitchResX
   - Open the App
   - Add License Key (In backup_codes directory)
 
-- VSCode
-
+#### VSCode
   - Open the App
   - Settings Sync:
     - Click "Backup and Sync Settings"
     - Click "Sign in"
     - Click "Sign in with GitHub"
 
-- Zoom
+#### Zoom
   - Open the App
   - Uncheck "Automatically keep Zoom desktop client up to date"
   - Login with 2U Zoom info
