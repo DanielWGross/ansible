@@ -234,3 +234,6 @@ There are a few ansible commands that will be useful.
     - General
       - Use dual monitors checked
   - System Preferences -> Privacy & Security -> Screen Recording -> Allow Zoom
+  - System Preferences -> Keyboard Shortcuts -> Show/Hide Floating Meeting Controls
+    - `Hyper+H`
+    - Enable Global Shortcut
