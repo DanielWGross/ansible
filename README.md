@@ -120,6 +120,7 @@ There are a few ansible commands that will be useful.
   - Add 1Password Extension
 - Charmstone
   - https://charmstone.app/
+  - Configure based on the screenshot in the `screenshot` directory
 - Dell Display and Peripheral Manager
   - `ctrl` + `cmd` + `t`: Toggle Inputs (USB-C -> HDMI)
   - May not be necessary but double-check the firmware for the monitor to see if it can be upgraded
