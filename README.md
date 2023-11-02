@@ -58,6 +58,10 @@ There are a few ansible commands that will be useful.
 - System Settings -> Siri & Spotlight
   - Turn Off "Ask Siri"
   - Uncheck all options under "Spotlight"
+- Increase Key Repeat Faster than settings above
+  - defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+  - defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+  - NOTE: This settings won't take effect until you log out and then back in.
 
 ## Installation
 
