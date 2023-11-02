@@ -85,11 +85,8 @@ There are a few ansible commands that will be useful.
 
 11. Clone this repo
 12. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
-13. Start MongoDB Server on System Startup
 
-- `brew services start mongodb/brew/mongodb-community`
-
-14. Install System76 Keyboard Configurator
+13. Install System76 Keyboard Configurator
 
 - https://system76.com/accessories/launch/download
 
@@ -190,6 +187,13 @@ There are a few ansible commands that will be useful.
   - Login with SSO
   - Enable all necessary permissions
 
+- MongoDB
+
+  - Start MongoDB Server on System Startup
+    - `brew services start mongodb/brew/mongodb-community`
+
+- MongoDB Compass
+  - Open the App
 - Rectangle Pro:
 
   - Open the App

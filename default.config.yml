@@ -23,6 +23,7 @@ homebrew_cask_apps:
   - insomnia
   - iterm2
   # - loom
+  - mongodb-compass
   # - obsidian
   - omnifocus
   - rectangle-pro
