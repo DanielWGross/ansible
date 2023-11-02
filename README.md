@@ -28,7 +28,6 @@ System Settings:
 # NEXT TO DO:
 
 - Look into Warp (again)
-- Look into Synergy by symless. symless.com
 - Install Powerlevel 10k
   - https://github.com/romkatv/powerlevel10k
 - Neovim Config
@@ -63,8 +62,9 @@ There are a few ansible commands that will be useful.
 
 1. Ensure there are no pending software updates.
 2. Ensure Apple's command line tools are installed (`xcode-select --install` to launch the installer).
-3. Ensure Python3 is installed by running `python3 --version`.
-4. Add Python 3 to your $PATH
+3. Install Rosetta 2: `sudo softwareupdate --install-rosetta`
+4. Ensure Python3 is installed by running `python3 --version`.
+5. Add Python 3 to your $PATH
 
 - Create a `.zshrc` in the root directory and add the following line:
   - `export PATH=$HOME/Library/Python/3.9/bin:$PATH`
@@ -87,6 +87,8 @@ There are a few ansible commands that will be useful.
 12. Run the playbook with `ansible-playbook main.yml --ask-vault-pass --ask-become-pass`
 
 13. Install System76 Keyboard Configurator
+14. Install Synerg
+15. Look into Synergy by symless. symless.com
 
 - https://system76.com/accessories/launch/download
 
