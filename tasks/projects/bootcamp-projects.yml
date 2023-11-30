@@ -19,7 +19,7 @@
 
 - name: Bootcamp - Student Repo
   ansible.builtin.git:
-    repo: git@git.bootcampcontent.com:University-of-Pennsylvania/UPENN-VIRT-FSF-PT-05-2023-U-LOLC.git
+    repo: git@git.bootcampcontent.com:University-of-Pennsylvania/UPENN-VIRT-FSF-PT-12-2023-U-LOLC.git
     dest: "{{ dev }}/bootcamp/student"
     key_file: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
   when: student_repo.stat.exists == False
